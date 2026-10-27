@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allanribei-trustscore"
+version = "0.1.0"
+description = "按证据类型与强度给结论评分，标出哪些结论缺少支撑"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "allanribei" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://allanribei.github.io"
+Repository = "https://github.com/allanribei/trustscore"
+Issues = "https://github.com/allanribei/trustscore/issues"
+
+[project.scripts]
+trustscore = "trustscore:main"
+
+[tool.setuptools]
+py-modules = ["trustscore"]
